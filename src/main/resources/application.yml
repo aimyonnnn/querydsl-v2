@@ -1,0 +1,26 @@
+# h2 databse
+# jdbc:h2:~/querydsl (?? ??) -> jdbc:h2:tcp://localhost/~/querydsl? ??
+
+spring:
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/querydsl
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+#        show_sql: true
+        format_sql: true
+
+#show_sql : ??? System.out ? ?????? ?? SQL? ???.
+#org.hibernate.SQL : ??? logger? ?? ?????? ?? SQL? ???
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+#    org.hibernate.type: trace
+
